@@ -27,9 +27,7 @@ const initialState: IFeedState = {
   error: null
 };
 
-export const fetchFeeds = createAsyncThunk('feed/fetchFeeds', () =>
-  getFeedsApi().then((data) => data)
-);
+export const fetchFeeds = createAsyncThunk('feed/fetchFeeds', getFeedsApi);
 
 export const fetchOrderById = createAsyncThunk<
   TOrder,

@@ -6,6 +6,7 @@ import { BurgerIngredientUI } from '@ui';
 import { TBurgerIngredientProps } from './type';
 import { addIngredient, setBun } from '../../services/slices/constructor-slice';
 import { TConstructorIngredient } from '@utils-types';
+import { v4 as uuidv4 } from 'uuid';
 
 export const BurgerIngredient: FC<TBurgerIngredientProps> = memo(
   ({ ingredient, count }) => {
@@ -18,7 +19,7 @@ export const BurgerIngredient: FC<TBurgerIngredientProps> = memo(
       } else {
         const ingredientToAdd: TConstructorIngredient = {
           ...ingredient,
-          id: `${Date.now()}-${Math.random().toString(36)}`
+          id: uuidv4()
         };
         dispatch(addIngredient(ingredientToAdd));
       }

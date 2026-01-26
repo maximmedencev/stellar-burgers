@@ -3,7 +3,6 @@ import { RegisterUI } from '@ui-pages';
 import { useDispatch, useSelector } from '../../services/store';
 import { registerUser } from '../../services/slices/user-slice';
 import { userSelector } from '../../services/slices/user-slice';
-import { Navigate } from 'react-router-dom';
 
 export const Register: FC = () => {
   const dispatch = useDispatch();
@@ -13,10 +12,6 @@ export const Register: FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorText, setErrorText] = useState('');
-
-  if (user) {
-    return <Navigate to='/' replace />;
-  }
 
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
