@@ -22,3 +22,18 @@
   flex-direction: column;
   align-items: center;
 }
+
+.standaloneWrapper {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.standaloneWrapper .content {
+  padding: 120px 60px 0px 60px;
+  margin: 0;
+  width: 100%;
+  max-width: 640px;
+  max-height: 575px;
+}
