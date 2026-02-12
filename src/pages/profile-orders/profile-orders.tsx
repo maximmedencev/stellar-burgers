@@ -6,7 +6,7 @@ import {
   userOrdersLoadingSelector,
   fetchUserOrders,
   selectUserOrders
-} from '../../services/slices/user-orders-sclice';
+} from '../../services/slices/user-orders-slice';
 import { useDispatch } from '../../services/store';
 
 import { Preloader } from '@ui';
