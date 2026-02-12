@@ -7,7 +7,7 @@ describe('Добавление ингредиента из списка в ко�
       statusCode: 200,
       body: ingredientsData
     }).as('getIngredients');
-    cy.visit('/');
+    cy.visit('http://localhost:4000');
   });
 
   it('добавляем булки в конструктор', () => {
@@ -89,7 +89,7 @@ describe('Работа модальных окон', () => {
       statusCode: 200,
       body: ingredientsData
     }).as('getIngredients');
-    cy.visit('/');
+    cy.visit('http://localhost:4000');
   });
 
   it('Работа модального окна с закрытием на щелчком кнопке', () => {
@@ -153,7 +153,7 @@ describe('Создание заказа', () => {
       win.localStorage.setItem('refreshToken', mockTokens.refreshToken);
     });
 
-    cy.visit('/');
+    cy.visit('http://localhost:4000');
     cy.wait('@getIngredients');
     cy.wait('@getUser');
   });

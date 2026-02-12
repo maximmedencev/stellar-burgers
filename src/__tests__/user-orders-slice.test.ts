@@ -125,6 +125,19 @@ describe('userOrders slice', () => {
       expect(state.profileOrders).toEqual([]);
     });
 
+    it('использует сообщение по умолчанию если нет ошибки', () => {
+      const state = userOrdersSlice.reducer(
+        { ...initialState, profileOrdersLoading: true },
+        {
+          type: fetchUserOrders.rejected.type,
+          payload: null
+        }
+      );
+
+      expect(state.profileOrdersLoading).toBe(false);
+      expect(state.error).toBe('Ошибка загрузки заказов');
+    });
+
     it('сохраняет старые заказы при ошибке', () => {
       const state = userOrdersSlice.reducer(
         {

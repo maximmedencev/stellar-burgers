@@ -83,6 +83,19 @@ describe('feed slice', () => {
       expect(state.feedsLoading).toBe(false);
       expect(state.error).toBe(errorMessage);
     });
+
+    it('использует сообщение по умолчанию если нет ошибки', () => {
+      const state = feedSlice.reducer(
+        { ...initialState, feedsLoading: true },
+        {
+          type: fetchFeeds.rejected.type,
+          error: {}
+        }
+      );
+
+      expect(state.feedsLoading).toBe(false);
+      expect(state.error).toBe('Ошибка загрузки ленты');
+    });
   });
 
   describe('fetchOrderById.pending', () => {

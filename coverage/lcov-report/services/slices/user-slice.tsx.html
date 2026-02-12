@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">62.92% </span>
+                <span class="strong">70.24% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>129/205</span>
+                <span class='fraction'>144/205</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">76.92% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>10/13</span>
+                <span class='fraction'>18/21</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">62.92% </span>
+                <span class="strong">70.24% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>129/205</span>
+                <span class='fraction'>144/205</span>
             </div>
         
             
@@ -439,31 +439,31 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -644,31 +644,31 @@ export const userSlice = createSlice({
         state.error = action.payload<span class="branch-0 cbranch-no" title="branch not covered" > || 'Требуется авторизация';</span>
       })
       .addCase(updateUserData.pending, (state) =&gt; {
-<span class="cstat-no" title="statement not covered" >        state.isLoading = true;</span>
-<span class="cstat-no" title="statement not covered" >        state.error = null;</span>
+        state.isLoading = true;
+        state.error = null;
       })
       .addCase(updateUserData.fulfilled, (state, action) =&gt; {
-<span class="cstat-no" title="statement not covered" >        state.isLoading = false;</span>
-<span class="cstat-no" title="statement not covered" >        state.user = action.payload;</span>
-<span class="cstat-no" title="statement not covered" >        state.error = null;</span>
+        state.isLoading = false;
+        state.user = action.payload;
+        state.error = null;
       })
       .addCase(updateUserData.rejected, (state, action) =&gt; {
-<span class="cstat-no" title="statement not covered" >        state.isLoading = false;</span>
-<span class="cstat-no" title="statement not covered" >        state.error = action.payload || 'Ошибка обновления';</span>
+        state.isLoading = false;
+        state.error = action.payload || 'Ошибка обновления';
       })
       .addCase(logoutUser.pending, (state) =&gt; {
-<span class="cstat-no" title="statement not covered" >        state.isLoading = true;</span>
-<span class="cstat-no" title="statement not covered" >        state.error = null;</span>
+        state.isLoading = true;
+        state.error = null;
       })
       .addCase(logoutUser.fulfilled, (state) =&gt; {
-<span class="cstat-no" title="statement not covered" >        state.user = null;</span>
-<span class="cstat-no" title="statement not covered" >        state.isLoading = false;</span>
-<span class="cstat-no" title="statement not covered" >        state.error = null;</span>
+        state.user = null;
+        state.isLoading = false;
+        state.error = null;
       })
       .addCase(logoutUser.rejected, (state, action) =&gt; {
-<span class="cstat-no" title="statement not covered" >        state.isLoading = false;</span>
-<span class="cstat-no" title="statement not covered" >        state.user = null;</span>
-<span class="cstat-no" title="statement not covered" >        state.error = action.payload || 'Ошибка выхода';</span>
+        state.isLoading = false;
+        state.user = null;
+        state.error = action.payload || 'Ошибка выхода';
       });
   }
 });
@@ -685,7 +685,7 @@ export const userErrorSelector = <span class="fstat-no" title="function not cove
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-02-09T14:51:42.118Z
+                at 2026-02-12T20:53:14.310Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

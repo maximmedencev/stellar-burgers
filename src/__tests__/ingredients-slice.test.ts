@@ -1,3 +1,4 @@
+import { TIngredient } from '@utils-types';
 import {
   ingredientsSlice,
   fetchIngredients
@@ -89,7 +90,7 @@ describe('ingredients slice', () => {
     it('сохраняет старые ингредиенты при ошибке', () => {
       const oldIngredients = [
         { _id: 'old-1', name: 'Старый ингредиент', type: 'main', price: 100 }
-      ] as any[];
+      ] as TIngredient[];
 
       const state = ingredientsSlice.reducer(
         {
